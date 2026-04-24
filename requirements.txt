@@ -1,0 +1,10 @@
+Django>=5.0,<6.0
+djangorestframework
+djangorestframework-simplejwt
+psycopg2-binary
+dj-database-url
+django-cors-headers
+django-ratelimit
+APScheduler
+qrcode
+Pillow

@@ -1,0 +1,268 @@
+Watching for file changes with StatReloader
+[23/Apr/2026 14:12:18] "GET /api/movies HTTP/1.1" 200 258
+[23/Apr/2026 14:12:18,143] - Broken pipe from ('127.0.0.1', 54167)
+Not Found: /
+[23/Apr/2026 14:14:38] "GET / HTTP/1.1" 404 3950
+Not Found: /favicon.ico
+[23/Apr/2026 14:14:39] "GET /favicon.ico HTTP/1.1" 404 4001
+[23/Apr/2026 14:14:42] "GET /admin HTTP/1.1" 301 0
+[23/Apr/2026 14:14:42] "GET /admin/ HTTP/1.1" 302 0
+[23/Apr/2026 14:14:42] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+[23/Apr/2026 14:14:43] "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[23/Apr/2026 14:14:43] "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[23/Apr/2026 14:14:43] "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[23/Apr/2026 14:14:43] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[23/Apr/2026 14:14:43] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[23/Apr/2026 14:14:43] "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[23/Apr/2026 14:14:43] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[23/Apr/2026 14:15:11] "GET /api/movies HTTP/1.1" 200 258
+[23/Apr/2026 14:15:11,353] - Broken pipe from ('127.0.0.1', 61979)
+[23/Apr/2026 14:15:55] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4348
+[23/Apr/2026 14:16:05] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[23/Apr/2026 14:16:05] "GET /admin/ HTTP/1.1" 200 18946
+[23/Apr/2026 14:16:05] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[23/Apr/2026 14:16:05] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[23/Apr/2026 14:16:05] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[23/Apr/2026 14:16:11] "GET /admin/catalogues/movie/ HTTP/1.1" 200 18426
+[23/Apr/2026 14:16:11] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+[23/Apr/2026 14:16:11] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[23/Apr/2026 14:16:11] "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+[23/Apr/2026 14:16:11] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[23/Apr/2026 14:16:11] "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+[23/Apr/2026 14:16:11] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+[23/Apr/2026 14:16:11] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[23/Apr/2026 14:16:11] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[23/Apr/2026 14:16:11] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+[23/Apr/2026 14:16:11] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[23/Apr/2026 14:16:11] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+[23/Apr/2026 14:16:11] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[23/Apr/2026 14:16:13] "GET /admin/catalogues/movie/dfc82179-8245-4472-877d-15cb8990aca7/change/ HTTP/1.1" 200 24641
+[23/Apr/2026 14:16:13] "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+[23/Apr/2026 14:16:13] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[23/Apr/2026 14:16:13] "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+[23/Apr/2026 14:16:13] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11973
+[23/Apr/2026 14:16:13] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+[23/Apr/2026 14:16:13] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[23/Apr/2026 14:16:13] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[23/Apr/2026 14:16:13] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[23/Apr/2026 14:16:15] "GET /admin/catalogues/movie/ HTTP/1.1" 200 18426
+C:\Users\User\Desktop\cinelux1\project\catalogues\services.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\User\Desktop\cinelux1\project\catalogues\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\User\Desktop\cinelux1\project\bookings\services.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\User\Desktop\cinelux1\project\catalogues\apps.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\User\Desktop\cinelux1\project\bookings\apps.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\User\Desktop\cinelux1\project\project\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\User\Desktop\cinelux1\project\project\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\User\Desktop\cinelux1\project\project\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\User\Desktop\cinelux1\project\catalogues\services.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\User\Desktop\cinelux1\project\project\settings.py changed, reloading.
+Watching for file changes with StatReloader
+[23/Apr/2026 15:18:17] "GET / HTTP/1.1" 200 7721
+[23/Apr/2026 15:18:17] "GET /static/frontend/app.css HTTP/1.1" 200 11293
+[23/Apr/2026 15:18:17,858] - Broken pipe from ('127.0.0.1', 60158)
+[23/Apr/2026 15:18:17] "GET /api/movies?limit=1 HTTP/1.1" 200 496
+[23/Apr/2026 15:18:17,903] - Broken pipe from ('127.0.0.1', 60159)
+[23/Apr/2026 15:18:17,921] - Broken pipe from ('127.0.0.1', 60160)
+[23/Apr/2026 15:19:06] "GET /admin/ HTTP/1.1" 200 18946
+[23/Apr/2026 15:19:06] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[23/Apr/2026 15:19:06] "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[23/Apr/2026 15:19:06] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[23/Apr/2026 15:19:06] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[23/Apr/2026 15:19:06] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[23/Apr/2026 15:19:06] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[23/Apr/2026 15:19:06] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[23/Apr/2026 15:19:06] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[23/Apr/2026 15:19:06] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[23/Apr/2026 15:19:12] "GET / HTTP/1.1" 200 7721
+[23/Apr/2026 15:19:12] "GET /static/frontend/app.css HTTP/1.1" 200 11293
+[23/Apr/2026 15:19:12] "GET /static/frontend/app.js HTTP/1.1" 200 12871
+[23/Apr/2026 15:19:13] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:19:14] "GET /static/catalogues/posters/letters-from-the-moon.png HTTP/1.1" 200 2470574
+[23/Apr/2026 15:19:14] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:19:14] "GET /static/catalogues/posters/midnight-at-marigold-station.png HTTP/1.1" 200 2581867
+[23/Apr/2026 15:19:14] "GET /static/catalogues/posters/aurora-protocol.png HTTP/1.1" 200 3004144
+[23/Apr/2026 15:19:14] "GET /static/catalogues/posters/the-hollow-carnival.png HTTP/1.1" 200 2812735
+[23/Apr/2026 15:19:14] "GET /static/catalogues/posters/harbor-of-paper-boats.png HTTP/1.1" 200 2802036
+[23/Apr/2026 15:19:14] "GET /static/catalogues/posters/clockwork-orchard.png HTTP/1.1" 200 3380897
+[23/Apr/2026 15:19:14] "GET /static/catalogues/posters/red-lantern-road.png HTTP/1.1" 200 2613473
+[23/Apr/2026 15:19:14] "GET /static/catalogues/posters/the-laughing-comet.png HTTP/1.1" 200 2928076
+[23/Apr/2026 15:19:28] "GET / HTTP/1.1" 200 7721
+[23/Apr/2026 15:19:28] "GET /static/frontend/app.css HTTP/1.1" 200 11293
+[23/Apr/2026 15:19:28] "GET /static/frontend/app.js HTTP/1.1" 200 12871
+[23/Apr/2026 15:19:30] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:19:30] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:19:30] "GET /static/catalogues/posters/aurora-protocol.png HTTP/1.1" 200 3004144
+[23/Apr/2026 15:19:30] "GET /static/catalogues/posters/clockwork-orchard.png HTTP/1.1" 200 3380897
+[23/Apr/2026 15:19:30] "GET /static/catalogues/posters/harbor-of-paper-boats.png HTTP/1.1" 200 2802036
+[23/Apr/2026 15:19:30] "GET /static/catalogues/posters/letters-from-the-moon.png HTTP/1.1" 200 2470574
+[23/Apr/2026 15:19:30] "GET /static/catalogues/posters/midnight-at-marigold-station.png HTTP/1.1" 200 2581867
+[23/Apr/2026 15:19:30] "GET /static/catalogues/posters/the-hollow-carnival.png HTTP/1.1" 200 2812735
+[23/Apr/2026 15:19:30] "GET /static/catalogues/posters/red-lantern-road.png HTTP/1.1" 200 2613473
+[23/Apr/2026 15:19:30] "GET /static/catalogues/posters/the-laughing-comet.png HTTP/1.1" 200 2928076
+Not Found: /favicon.ico
+[23/Apr/2026 15:19:30] "GET /favicon.ico HTTP/1.1" 404 4583
+[23/Apr/2026 15:22:26] "GET / HTTP/1.1" 200 7757
+[23/Apr/2026 15:22:26] "GET /static/frontend/app.css HTTP/1.1" 200 11378
+[23/Apr/2026 15:22:26] "GET /static/frontend/app.js HTTP/1.1" 200 12961
+[23/Apr/2026 15:22:27] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:22:27] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:22:27] "GET /static/catalogues/posters/aurora-protocol.png HTTP/1.1" 200 3004144
+[23/Apr/2026 15:22:27] "GET /static/catalogues/posters/clockwork-orchard.png HTTP/1.1" 200 3380897
+[23/Apr/2026 15:22:27] "GET /static/catalogues/posters/harbor-of-paper-boats.png HTTP/1.1" 200 2802036
+[23/Apr/2026 15:22:27] "GET /static/catalogues/posters/letters-from-the-moon.png HTTP/1.1" 200 2470574
+[23/Apr/2026 15:22:27] "GET /static/catalogues/posters/midnight-at-marigold-station.png HTTP/1.1" 200 2581867
+[23/Apr/2026 15:22:27] "GET /static/catalogues/posters/red-lantern-road.png HTTP/1.1" 200 2613473
+[23/Apr/2026 15:22:27] "GET /static/catalogues/posters/the-hollow-carnival.png HTTP/1.1" 200 2812735
+[23/Apr/2026 15:22:27] "GET /static/catalogues/posters/the-laughing-comet.png HTTP/1.1" 200 2928076
+[23/Apr/2026 15:22:47] "GET / HTTP/1.1" 200 7757
+[23/Apr/2026 15:22:47] "GET /static/frontend/app.js HTTP/1.1" 200 12961
+[23/Apr/2026 15:22:47] "GET /static/frontend/app.css HTTP/1.1" 200 11378
+[23/Apr/2026 15:22:47] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:22:47] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:22:47] "GET /static/catalogues/posters/aurora-protocol.png HTTP/1.1" 200 3004144
+[23/Apr/2026 15:22:47] "GET /static/catalogues/posters/clockwork-orchard.png HTTP/1.1" 200 3380897
+[23/Apr/2026 15:22:47] "GET /static/catalogues/posters/harbor-of-paper-boats.png HTTP/1.1" 200 2802036
+[23/Apr/2026 15:22:47] "GET /static/catalogues/posters/letters-from-the-moon.png HTTP/1.1" 200 2470574
+[23/Apr/2026 15:22:47] "GET /static/catalogues/posters/midnight-at-marigold-station.png HTTP/1.1" 200 2581867
+[23/Apr/2026 15:22:47] "GET /static/catalogues/posters/red-lantern-road.png HTTP/1.1" 200 2613473
+[23/Apr/2026 15:22:47] "GET /static/catalogues/posters/the-hollow-carnival.png HTTP/1.1" 200 2812735
+[23/Apr/2026 15:22:47] "GET /static/catalogues/posters/the-laughing-comet.png HTTP/1.1" 200 2928076
+C:\Users\User\Desktop\cinelux1\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 27 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+[23/Apr/2026 15:22:50] "POST /api/users/login HTTP/1.1" 200 736
+[23/Apr/2026 15:25:16] "POST /api/users/register HTTP/1.1" 201 283
+[23/Apr/2026 15:25:17] "POST /api/users/login HTTP/1.1" 200 736
+[23/Apr/2026 15:29:40] "GET /api/movies?limit=1 HTTP/1.1" 200 496
+[23/Apr/2026 15:29:40,889] - Broken pipe from ('127.0.0.1', 52422)
+[23/Apr/2026 15:30:02] "GET / HTTP/1.1" 200 8392
+[23/Apr/2026 15:30:02] "GET /static/frontend/app.css HTTP/1.1" 200 13873
+[23/Apr/2026 15:30:02] "GET /static/frontend/app.js HTTP/1.1" 200 16657
+[23/Apr/2026 15:30:03] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:30:03] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:30:03] "GET /static/catalogues/posters/aurora-protocol.png HTTP/1.1" 200 3004144
+[23/Apr/2026 15:30:03] "GET /static/catalogues/posters/clockwork-orchard.png HTTP/1.1" 200 3380897
+[23/Apr/2026 15:30:03] "GET /static/catalogues/posters/harbor-of-paper-boats.png HTTP/1.1" 200 2802036
+[23/Apr/2026 15:30:03] "GET /static/catalogues/posters/letters-from-the-moon.png HTTP/1.1" 200 2470574
+[23/Apr/2026 15:30:03] "GET /static/catalogues/posters/midnight-at-marigold-station.png HTTP/1.1" 200 2581867
+[23/Apr/2026 15:30:03] "GET /static/catalogues/posters/red-lantern-road.png HTTP/1.1" 200 2613473
+[23/Apr/2026 15:30:03] "GET /static/catalogues/posters/the-hollow-carnival.png HTTP/1.1" 200 2812735
+[23/Apr/2026 15:30:03] "GET /static/catalogues/posters/the-laughing-comet.png HTTP/1.1" 200 2928076
+[23/Apr/2026 15:30:04] "GET / HTTP/1.1" 200 8392
+[23/Apr/2026 15:30:04] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:30:04] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:30:06] "POST /api/users/login HTTP/1.1" 200 736
+C:\Users\User\Desktop\cinelux1\Lib\site-packages\jwt\api_jwt.py:365: InsecureKeyLengthWarning: The HMAC key is 27 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+Internal Server Error: /api/recommendations/b683e96a-0e6d-4531-8bbc-73e1a50f0034
+[23/Apr/2026 15:30:06] "GET /api/recommendations/b683e96a-0e6d-4531-8bbc-73e1a50f0034?limit=6 HTTP/1.1" 500 88
+[23/Apr/2026 15:30:15,923] - Broken pipe from ('127.0.0.1', 58692)
+[23/Apr/2026 15:30:15,929] - Broken pipe from ('127.0.0.1', 56126)
+[23/Apr/2026 15:30:15,933] - Broken pipe from ('127.0.0.1', 49358)
+[23/Apr/2026 15:30:15,935] - Broken pipe from ('127.0.0.1', 63959)
+[23/Apr/2026 15:30:15,935] - Broken pipe from ('127.0.0.1', 59326)
+[23/Apr/2026 15:30:15,936] - Broken pipe from ('127.0.0.1', 59857)
+[23/Apr/2026 15:30:23] "GET / HTTP/1.1" 200 8392
+[23/Apr/2026 15:30:23] "GET /static/frontend/app.css HTTP/1.1" 200 13873
+[23/Apr/2026 15:30:23] "GET /static/frontend/app.js HTTP/1.1" 200 16657
+Internal Server Error: /api/recommendations/62618fb0-ab35-4e1f-ad54-aa4041a1f0dc
+[23/Apr/2026 15:30:23] "GET /api/recommendations/62618fb0-ab35-4e1f-ad54-aa4041a1f0dc?limit=6 HTTP/1.1" 500 88
+Internal Server Error: /api/movies
+[23/Apr/2026 15:30:23] "GET /api/movies?page=1&limit=100 HTTP/1.1" 500 88
+[23/Apr/2026 15:30:38] "GET /static/frontend/app.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[23/Apr/2026 15:30:38] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4694
+[23/Apr/2026 15:31:24] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:31:24,317] - Broken pipe from ('127.0.0.1', 56916)
+[23/Apr/2026 15:31:40] "POST /api/users/login HTTP/1.1" 200 736
+Internal Server Error: /api/recommendations/b683e96a-0e6d-4531-8bbc-73e1a50f0034
+[23/Apr/2026 15:31:40] "GET /api/recommendations/b683e96a-0e6d-4531-8bbc-73e1a50f0034?limit=6 HTTP/1.1" 500 88
+[23/Apr/2026 15:31:40,516] - Broken pipe from ('127.0.0.1', 55758)
+[23/Apr/2026 15:31:50] "POST /api/users/login HTTP/1.1" 200 736
+Internal Server Error: /api/recommendations/b683e96a-0e6d-4531-8bbc-73e1a50f0034
+[23/Apr/2026 15:31:51] "GET /api/recommendations/b683e96a-0e6d-4531-8bbc-73e1a50f0034?limit=6 HTTP/1.1" 500 88
+[23/Apr/2026 15:31:51,090] - Broken pipe from ('127.0.0.1', 65165)
+[23/Apr/2026 15:31:52] "GET / HTTP/1.1" 200 8392
+[23/Apr/2026 15:31:52] "GET /static/frontend/app.css HTTP/1.1" 304 0
+[23/Apr/2026 15:31:52] "GET /static/frontend/app.js HTTP/1.1" 304 0
+[23/Apr/2026 15:31:52] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:31:53] "GET /static/catalogues/posters/aurora-protocol.png HTTP/1.1" 304 0
+[23/Apr/2026 15:31:53] "GET /static/catalogues/posters/clockwork-orchard.png HTTP/1.1" 304 0
+[23/Apr/2026 15:31:53] "GET /static/catalogues/posters/harbor-of-paper-boats.png HTTP/1.1" 304 0
+[23/Apr/2026 15:31:53] "GET /static/catalogues/posters/letters-from-the-moon.png HTTP/1.1" 304 0
+[23/Apr/2026 15:31:53] "GET /static/catalogues/posters/midnight-at-marigold-station.png HTTP/1.1" 304 0
+[23/Apr/2026 15:31:53] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:31:53] "GET /static/catalogues/posters/red-lantern-road.png HTTP/1.1" 304 0
+[23/Apr/2026 15:31:53] "GET /static/catalogues/posters/the-hollow-carnival.png HTTP/1.1" 304 0
+[23/Apr/2026 15:31:53] "GET /static/catalogues/posters/the-laughing-comet.png HTTP/1.1" 304 0
+[23/Apr/2026 15:32:09] "POST /api/users/login HTTP/1.1" 200 736
+Internal Server Error: /api/recommendations/62618fb0-ab35-4e1f-ad54-aa4041a1f0dc
+[23/Apr/2026 15:32:09] "GET /api/recommendations/62618fb0-ab35-4e1f-ad54-aa4041a1f0dc?limit=6 HTTP/1.1" 500 88
+[23/Apr/2026 15:32:17] "GET / HTTP/1.1" 200 8392
+[23/Apr/2026 15:32:17] "GET /static/frontend/app.css HTTP/1.1" 304 0
+[23/Apr/2026 15:32:17] "GET /static/frontend/app.js HTTP/1.1" 304 0
+Internal Server Error: /api/recommendations/62618fb0-ab35-4e1f-ad54-aa4041a1f0dc
+Internal Server Error: /api/movies
+[23/Apr/2026 15:32:17] "GET /api/recommendations/62618fb0-ab35-4e1f-ad54-aa4041a1f0dc?limit=6 HTTP/1.1" 500 88
+[23/Apr/2026 15:32:17] "GET /api/movies?page=1&limit=100 HTTP/1.1" 500 88
+C:\Users\User\Desktop\cinelux1\project\project\settings.py changed, reloading.
+Watching for file changes with StatReloader
+[23/Apr/2026 15:33:02] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:33:02,120] - Broken pipe from ('127.0.0.1', 58556)
+C:\Users\User\Desktop\cinelux1\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 27 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+[23/Apr/2026 15:33:03] "POST /api/users/login HTTP/1.1" 200 736
+C:\Users\User\Desktop\cinelux1\Lib\site-packages\jwt\api_jwt.py:365: InsecureKeyLengthWarning: The HMAC key is 27 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+[23/Apr/2026 15:33:03] "GET /api/recommendations/b683e96a-0e6d-4531-8bbc-73e1a50f0034?limit=2 HTTP/1.1" 200 1139
+[23/Apr/2026 15:33:03,459] - Broken pipe from ('127.0.0.1', 58555)
+[23/Apr/2026 15:33:04] "GET / HTTP/1.1" 200 8392
+[23/Apr/2026 15:33:04] "GET /static/frontend/app.js HTTP/1.1" 304 0
+[23/Apr/2026 15:33:04] "GET /static/frontend/app.css HTTP/1.1" 304 0
+[23/Apr/2026 15:33:04] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:33:04] "GET /api/recommendations/62618fb0-ab35-4e1f-ad54-aa4041a1f0dc?limit=6 HTTP/1.1" 200 3125
+[23/Apr/2026 15:33:04] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:33:22] "GET / HTTP/1.1" 200 8392
+[23/Apr/2026 15:33:22] "GET /static/frontend/app.css HTTP/1.1" 200 13873
+[23/Apr/2026 15:33:22] "GET /static/frontend/app.js HTTP/1.1" 200 16657
+[23/Apr/2026 15:33:23] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:33:23] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:33:23] "GET /static/catalogues/posters/aurora-protocol.png HTTP/1.1" 200 3004144
+[23/Apr/2026 15:33:23] "GET /static/catalogues/posters/clockwork-orchard.png HTTP/1.1" 200 3380897
+[23/Apr/2026 15:33:23] "GET /static/catalogues/posters/harbor-of-paper-boats.png HTTP/1.1" 200 2802036
+[23/Apr/2026 15:33:23] "GET /static/catalogues/posters/letters-from-the-moon.png HTTP/1.1" 200 2470574
+[23/Apr/2026 15:33:23] "GET /static/catalogues/posters/midnight-at-marigold-station.png HTTP/1.1" 200 2581867
+[23/Apr/2026 15:33:23] "GET /static/catalogues/posters/red-lantern-road.png HTTP/1.1" 200 2613473
+[23/Apr/2026 15:33:24] "GET /static/catalogues/posters/the-hollow-carnival.png HTTP/1.1" 200 2812735
+[23/Apr/2026 15:33:24] "GET /static/catalogues/posters/the-laughing-comet.png HTTP/1.1" 200 2928076
+[23/Apr/2026 15:33:24] "GET / HTTP/1.1" 200 8392
+[23/Apr/2026 15:33:24] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:33:24] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:33:26] "POST /api/users/login HTTP/1.1" 200 736
+[23/Apr/2026 15:33:26] "GET /api/recommendations/b683e96a-0e6d-4531-8bbc-73e1a50f0034?limit=6 HTTP/1.1" 200 3178
+[23/Apr/2026 15:33:26] "GET /api/movies/08eb9358-a6bf-4c49-8d1b-fc48880ea4c1/showtimes HTTP/1.1" 200 987
+[23/Apr/2026 15:33:41] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:33:41] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:33:44] "GET / HTTP/1.1" 200 8392
+[23/Apr/2026 15:33:45] "GET /static/frontend/app.css HTTP/1.1" 200 13873
+[23/Apr/2026 15:33:45] "GET /static/frontend/app.js HTTP/1.1" 200 16657
+[23/Apr/2026 15:33:45] "GET /api/movies?page=1&limit=100 HTTP/1.1" 200 3591
+[23/Apr/2026 15:33:45] "GET /api/movies/66d6956f-dace-4543-b6d0-92a0461b91cc/showtimes HTTP/1.1" 200 985
+[23/Apr/2026 15:33:45] "GET /static/catalogues/posters/aurora-protocol.png HTTP/1.1" 200 3004144
+[23/Apr/2026 15:33:45] "GET /static/catalogues/posters/clockwork-orchard.png HTTP/1.1" 200 3380897
+[23/Apr/2026 15:33:45] "GET /static/catalogues/posters/harbor-of-paper-boats.png HTTP/1.1" 200 2802036
+[23/Apr/2026 15:33:45] "GET /static/catalogues/posters/letters-from-the-moon.png HTTP/1.1" 200 2470574
+[23/Apr/2026 15:33:45] "GET /static/catalogues/posters/midnight-at-marigold-station.png HTTP/1.1" 200 2581867
+[23/Apr/2026 15:33:45] "GET /static/catalogues/posters/red-lantern-road.png HTTP/1.1" 200 2613473
+[23/Apr/2026 15:33:45] "GET /static/catalogues/posters/the-hollow-carnival.png HTTP/1.1" 200 2812735
+[23/Apr/2026 15:33:45] "GET /static/catalogues/posters/the-laughing-comet.png HTTP/1.1" 200 2928076
+[23/Apr/2026 15:33:47] "POST /api/users/login HTTP/1.1" 200 736
+[23/Apr/2026 15:33:48] "GET /api/recommendations/b683e96a-0e6d-4531-8bbc-73e1a50f0034?limit=6 HTTP/1.1" 200 3178

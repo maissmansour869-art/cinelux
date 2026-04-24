@@ -1,0 +1,167 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CineLux</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="{% static 'frontend/app.css' %}">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <a class="brand" href="#catalogue" aria-label="CineLux home">
+                <span class="brand-mark" aria-hidden="true">CL</span>
+                <span>
+                    <strong>CineLux</strong>
+                    <small>Curated cinema nights</small>
+                </span>
+            </a>
+            <nav class="topnav" aria-label="Primary">
+                <a href="#catalogue" class="nav-link active" data-nav="catalogue">Catalogue</a>
+                <a href="#auth" class="nav-link" data-nav="auth">Login / Signup</a>
+            </nav>
+            <div class="session-chip" id="sessionChip">
+                <span class="session-dot"></span>
+                <span id="sessionText">Guest mode</span>
+                <button class="ghost-button small hidden" id="logoutButton" type="button">Sign out</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="catalogue-view view active" id="catalogueView" aria-labelledby="catalogueTitle">
+                <div class="catalogue-hero">
+                    <div>
+                        <p class="eyebrow">Now showing</p>
+                        <h1 id="catalogueTitle">Pick a film that earns the evening.</h1>
+                    </div>
+                    <div class="hero-metrics" aria-label="Catalogue summary">
+                        <span><strong id="movieCount">0</strong> films</span>
+                        <span><strong id="genreCount">0</strong> genres</span>
+                        <span><strong id="showtimeCount">0</strong> showtimes loaded</span>
+                    </div>
+                </div>
+
+                <form class="toolbar" id="filterForm">
+                    <label class="field search-field">
+                        <span>Search movies</span>
+                        <input id="searchInput" type="search" placeholder="Title, mood, story..." autocomplete="off">
+                    </label>
+                    <label class="field compact-field">
+                        <span>Genres</span>
+                        <select id="genreSelect">
+                            <option value="">All genres</option>
+                        </select>
+                    </label>
+                    <label class="field compact-field">
+                        <span>Date</span>
+                        <input id="dateInput" type="date">
+                    </label>
+                    <button class="primary-button" type="submit">Filter</button>
+                </form>
+
+                <section class="recommendations-panel" id="recommendationsPanel" aria-labelledby="recommendationsTitle">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">Recommendations</p>
+                            <h2 id="recommendationsTitle">Picked for your taste</h2>
+                        </div>
+                        <span id="recommendationsStatus">Sign in for personal picks</span>
+                    </div>
+                    <div class="recommendations-grid" id="recommendationsGrid" aria-live="polite"></div>
+                </section>
+
+                <div class="content-grid">
+                    <section class="movie-grid" id="movieGrid" aria-live="polite"></section>
+                    <aside class="detail-panel" id="detailPanel" aria-live="polite">
+                        <div class="empty-state">
+                            <p class="eyebrow">Select a movie</p>
+                            <h2>Details and showtimes will appear here.</h2>
+                            <p>Browse the current CineLux catalogue, then choose a title to see age rating, runtime, genres, and available sessions.</p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="auth-view view" id="authView" aria-labelledby="authTitle">
+                <div class="auth-art">
+                    <p class="eyebrow">Member access</p>
+                    <h1 id="authTitle">Your next cinema night starts with a clean sign-in.</h1>
+                    <p>Use the seeded user `maya@cinelux.local` with `CineLuxUser2026`, or create a new account.</p>
+                </div>
+
+                <div class="auth-panel">
+                    <div class="segmented" role="tablist" aria-label="Authentication mode">
+                        <button type="button" role="tab" aria-selected="true" class="segment active" data-auth-tab="login">Sign in</button>
+                        <button type="button" role="tab" aria-selected="false" class="segment" data-auth-tab="signup">Create account</button>
+                    </div>
+
+                    <form id="loginForm" class="auth-form active" data-auth-form="login">
+                        <label class="field">
+                            <span>Email</span>
+                            <input name="email" type="email" value="maya@cinelux.local" required autocomplete="email">
+                        </label>
+                        <label class="field">
+                            <span>Password</span>
+                            <input name="password" type="password" value="CineLuxUser2026" required autocomplete="current-password">
+                        </label>
+                        <button class="primary-button full" type="submit">Sign in</button>
+                    </form>
+
+                    <form id="signupForm" class="auth-form" data-auth-form="signup">
+                        <div class="split-fields">
+                            <label class="field">
+                                <span>First name</span>
+                                <input name="firstName" type="text" required autocomplete="given-name">
+                            </label>
+                            <label class="field">
+                                <span>Last name</span>
+                                <input name="lastName" type="text" required autocomplete="family-name">
+                            </label>
+                        </div>
+                        <label class="field">
+                            <span>Email</span>
+                            <input name="email" type="email" required autocomplete="email">
+                        </label>
+                        <label class="field">
+                            <span>Password</span>
+                            <input name="password" type="password" minlength="8" required autocomplete="new-password">
+                        </label>
+                        <label class="field">
+                            <span>Phone</span>
+                            <input name="phone" type="tel" placeholder="+1555010103" autocomplete="tel">
+                        </label>
+                        <fieldset class="genre-prefs">
+                            <legend>Preferred genres</legend>
+                            <div id="signupGenres" class="genre-choice-grid"></div>
+                        </fieldset>
+                        <button class="primary-button full" type="submit">Create account</button>
+                    </form>
+
+                    <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <template id="movieCardTemplate">
+        <article class="movie-card">
+            <button class="poster-button" type="button">
+                <img class="poster" alt="">
+                <span class="rating-pill"></span>
+            </button>
+            <div class="movie-copy">
+                <h2></h2>
+                <p></p>
+                <div class="movie-meta"></div>
+            </div>
+        </article>
+    </template>
+
+    <script src="{% static 'frontend/app.js' %}" defer></script>
+</body>
+</html>
