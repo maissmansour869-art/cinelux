@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "outline": "#99907c",
+                    "on-error": "#690005",
+                    "secondary-fixed": "#dee2f4",
+                    "on-primary-container": "#554300",
+                    "on-secondary": "#2b303e",
+                    "on-secondary-container": "#b0b5c6",
+                    "on-background": "#e5e2e1",
+                    "secondary": "#c2c6d8",
+                    "error": "#ffb4ab",
+                    "surface-variant": "#353534",
+                    "primary-fixed": "#ffe088",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-fixed": "#410003",
+                    "primary-fixed-dim": "#e9c349",
+                    "surface-container": "#201f1f",
+                    "on-tertiary-fixed-variant": "#92030f",
+                    "primary": "#f2ca50",
+                    "tertiary": "#ffbfb8",
+                    "surface-tint": "#e9c349",
+                    "tertiary-fixed": "#ffdad6",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary": "#3c2f00",
+                    "tertiary-container": "#ff968c",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-fixed-variant": "#424655",
+                    "tertiary-fixed-dim": "#ffb4ac",
+                    "on-primary-fixed": "#241a00",
+                    "primary-container": "#d4af37",
+                    "on-tertiary-container": "#90000e",
+                    "inverse-primary": "#735c00",
+                    "on-tertiary": "#690007",
+                    "surface-bright": "#393939",
+                    "surface-container-highest": "#353534",
+                    "on-error-container": "#ffdad6",
+                    "background": "#131313",
+                    "on-surface-variant": "#d0c5af",
+                    "secondary-container": "#424655",
+                    "surface": "#131313",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed": "#161b28",
+                    "outline-variant": "#4d4635",
+                    "on-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-fixed-variant": "#574500",
+                    "inverse-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#c2c6d8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "label-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "headline-lg": ["Noto Serif"],
+                    "display-xl": ["Noto Serif"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(26, 31, 44, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-vignette {
+            background: linear-gradient(0deg, #131313 0%, rgba(19, 19, 19, 0.4) 50%, rgba(19, 19, 19, 0) 100%),
+                        linear-gradient(90deg, #131313 0%, rgba(19, 19, 19, 0) 40%);
+        }
+        .movie-card-overlay {
+            background: linear-gradient(to top, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0) 60%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-8 h-20 bg-[#1A1F2C]/60 backdrop-blur-xl z-50 border-b border-white/10 shadow-2xl">
+<div class="text-2xl font-bold tracking-widest text-[#D4AF37] uppercase font-['Noto_Serif']">CineLux</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Noto_Serif'] tracking-wide text-sm font-medium text-[#D4AF37] border-b-2 border-[#D4AF37] pb-1" href="#">Movies</a>
+<a class="font-['Noto_Serif'] tracking-wide text-sm font-medium text-white/70 hover:text-white transition-colors" href="#">Cinemas</a>
+<a class="font-['Noto_Serif'] tracking-wide text-sm font-medium text-white/70 hover:text-white transition-colors" href="#">Offers</a>
+<a class="font-['Noto_Serif'] tracking-wide text-sm font-medium text-white/70 hover:text-white transition-colors" href="#">Experience</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="relative flex items-center bg-white/5 border border-white/10 rounded-full px-4 py-1.5">
+<span class="material-symbols-outlined text-[#D4AF37] text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-white placeholder-white/40 w-48" placeholder="Search movies..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-white/70 hover:text-[#D4AF37] transition-all">history</button>
+<div class="w-10 h-10 rounded-full border border-[#D4AF37]/30 overflow-hidden">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="Professional portrait of a man in his 30s with a sharp haircut and stylish glasses, soft studio lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXP6QsMYH1PhGEQqCczz0yKcYEvuMPl6L9bLVcYGToQ1GH8jW_zhCM1zu1TA2MowDahDZRkV5k6RUuiAB8NqPkxsnjTfPz7ALSr8eAd4Ih8NxxMTYqIvOwEPaXgCHx7ZRjxF__ti87h8q6nB8WTQdpy-OeeflWUjEBCPYxbm-I-U11tULFzkiRcUmsvBvHM2rs4osD3Khl48zXP5oV-BhjYva72YTFAD2CFIpMpoXDHxoVGlB7mAVd7qJ_mlvGCYMgFkIPX1qVig-H"/>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] w-full overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Aurora Protocol Poster" class="w-full h-full object-cover" data-alt="Cinematic wide shot of a glowing celestial aurora above a futuristic minimalist research station on a dark crystalline planet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Ms7qkOCuIQ-yqTzMru4Dut9s4ESyKUtIoWlmumEmWXE5lAxDQqT0oR9w39i9fIm4hLbgdXb2R6_YE6dwl7XZGDpIrsnPwJN9pWOFUG8R4OAFe6k1r9m5iXzwUp-Kbt7CIB63CarBpDJvut4pHw_0HfXFKbVllD06WmJ_6XaZ5J-v-yuh59stDWME62gJFvzkxo-0SZY_HEeqm4eiQc60jxyLivfHd8X0Ak2YyBKNtknwN-AT-LLf8rJ2eSkGDsIsrI2l4dAsRJGQ"/>
+<div class="absolute inset-0 hero-vignette"></div>
+</div>
+<div class="relative z-10 container mx-auto h-full flex flex-col justify-center px-12 md:px-24">
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-[#D4AF37] text-surface-dim px-3 py-0.5 font-label-md text-[10px] rounded uppercase tracking-tighter">Premium Selection</span>
+<span class="text-white/60 font-label-sm border border-white/20 px-2 py-0.5 rounded">PG-13</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-white mb-6 max-w-2xl leading-[1.1]">Aurora Protocol</h1>
+<p class="font-body-lg text-body-lg text-white/70 max-w-xl mb-10 leading-relaxed">
+                    When a cosmic anomaly threatens to rewrite biological history, one clandestine team must venture into the heart of the void to reset the clock of existence.
+                </p>
+<div class="flex gap-6">
+<button class="bg-primary-container text-on-primary px-8 py-4 font-label-md uppercase tracking-widest flex items-center gap-2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+                        Book Now
+                    </button>
+<button class="border border-[#D4AF37] text-[#D4AF37] px-8 py-4 font-label-md uppercase tracking-widest flex items-center gap-2 hover:bg-[#D4AF37]/10 transition-all">
+<span class="material-symbols-outlined">play_arrow</span>
+                        Watch Trailer
+                    </button>
+</div>
+</div>
+</section>
+<!-- Search & Filter Bar -->
+<div class="container mx-auto px-12 -mt-10 relative z-20">
+<div class="glass-panel rounded-xl p-6 flex flex-col md:flex-row items-center gap-6 shadow-2xl">
+<div class="flex-1 flex items-center gap-3 w-full border-r border-white/10 pr-6">
+<span class="material-symbols-outlined text-[#D4AF37]">movie_filter</span>
+<div class="flex flex-col flex-1">
+<label class="text-[10px] uppercase text-white/40 tracking-widest font-label-sm">Movie Title</label>
+<input class="bg-transparent border-none p-0 text-white placeholder-white/20 focus:ring-0 text-lg font-headline-md" placeholder="Search by name..." type="text"/>
+</div>
+</div>
+<div class="w-full md:w-64 flex items-center gap-3 border-r border-white/10 pr-6">
+<span class="material-symbols-outlined text-[#D4AF37]">category</span>
+<div class="flex flex-col flex-1">
+<label class="text-[10px] uppercase text-white/40 tracking-widest font-label-sm">Select Genre</label>
+<select class="bg-transparent border-none p-0 text-white focus:ring-0 text-lg font-headline-md appearance-none cursor-pointer">
+<option class="bg-surface-dim">All Genres</option>
+<option class="bg-surface-dim">Sci-Fi</option>
+<option class="bg-surface-dim">Drama</option>
+<option class="bg-surface-dim">Thriller</option>
+</select>
+</div>
+</div>
+<div class="w-full md:w-64 flex items-center gap-3">
+<span class="material-symbols-outlined text-[#D4AF37]">event</span>
+<div class="flex flex-col flex-1">
+<label class="text-[10px] uppercase text-white/40 tracking-widest font-label-sm">Viewing Date</label>
+<input class="bg-transparent border-none p-0 text-white focus:ring-0 text-lg font-headline-md cursor-pointer [color-scheme:dark]" type="date"/>
+</div>
+</div>
+<button class="bg-[#D4AF37] text-surface-dim h-14 w-14 rounded-lg flex items-center justify-center hover:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl font-bold">search</span>
+</button>
+</div>
+</div>
+<!-- Trending Now -->
+<section class="container mx-auto px-12 mt-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-2">Trending Now</h2>
+<div class="h-1 w-20 bg-[#D4AF37]"></div>
+</div>
+<a class="text-[#D4AF37] font-label-md uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                    View Gallery <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Highlight Card -->
+<div class="md:col-span-1 group relative h-[500px] rounded-xl overflow-hidden glass-panel border-white/10 transition-all duration-500 hover:border-[#D4AF37]/40">
+<img alt="Midnight at Marigold Station" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Moody noir scene of a steam-filled train station platform at night with a mysterious woman in a trench coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvAKxNFWBVOZVYk9tKItwq3EXhMJmejuJSAkQZ5QtL_gH8MbBtMX_r7nDYkDs1Ln5vHI-o2V1lr3MgpwtzhbJM0V9haUPNx0usXGvpYgMk2Wn3ARr2bTVU-rbzURouwkvj-kALqZgQ1zvP5f8YjPKEWIjGILt_VYNRIqjuR9KtMOzX5-OeXnlr2l_xh5G5rokTL0HwKJ6ZN8MduUOfTrljub8ueApXn0czK95lhIPSSdvYQangYG4irDCpaxQQIJrE0M4jiHo0VHGq"/>
+<div class="absolute inset-0 movie-card-overlay flex flex-col justify-end p-8">
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] text-[#D4AF37] border border-[#D4AF37]/40 px-2 py-0.5 rounded uppercase font-label-sm">Mystery</span>
+<span class="text-[10px] text-white/60 border border-white/20 px-2 py-0.5 rounded uppercase font-label-sm">R</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white group-hover:text-[#D4AF37] transition-colors mb-2">Midnight at Marigold Station</h3>
+</div>
+</div>
+<!-- Secondary Cards Bento Style -->
+<div class="md:col-span-2 grid grid-cols-2 gap-8">
+<div class="group relative rounded-xl overflow-hidden glass-panel border-white/10 hover:border-[#D4AF37]/40 transition-all">
+<img alt="The Laughing Comet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Surreal colorful nebula with a central glowing comet shaped like a faint smiling face, high fantasy vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAOoDOapHBLfbpbsxhRm6DyzXJiyayKCUOZFeULhXrfz287CoF0Uhi9TtcCDiVaXkyCnOAcwD8lmipibPgNcgPb8hL8IfuS7D_9Un5QD7zT7-0X8lul8-ljNv-aryy8Xys4kNZXb0lH6RABR_7cJbD7Dve8LZn_tbTHaYOnP2nArX9xK-gE0y_f7bbb2Bfq7pOFGMc-g_iLk5LaDWcaObQgv_vOQ184bFDplSld7tWKkvmhGGafcAvCWcinbpZASERFDL2WgJ9vGps"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<span class="text-[10px] text-[#D4AF37] uppercase font-label-sm mb-1">Comedy / Sci-Fi</span>
+<h4 class="font-headline-md text-2xl text-white">The Laughing Comet</h4>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden glass-panel border-white/10 hover:border-[#D4AF37]/40 transition-all">
+<img alt="Harbor of Paper Boats" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Whimsical shot of thousands of glowing paper boats floating on a dark sea under a full moon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl7lRbFrLBxEYU3-ipY7emkKqzFexQ4V2k0NWSK28KeljbxgclOJrLjgZ7BPc90tXMrNmT0JgbSre-v77SBhEvf2ypVIY8XdbTQPL4XDsnwB8CjWFCKpNzgwBbanNpw5ROcstc55SFJxexS55mMs4CAk6_NbUFlkxZ71EL6xLAfPtIKaqxkhOX1r0puGeVQUlHBwKiYrPAIXToRhF9mX_YFCrSqYyP7OwByZ8E1ORBLTbRBtT7w73pWBGCtFD_gmf2pZY8G63dRJg7"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<span class="text-[10px] text-[#D4AF37] uppercase font-label-sm mb-1">Animation / Drama</span>
+<h4 class="font-headline-md text-2xl text-white">Harbor of Paper Boats</h4>
+</div>
+</div>
+<div class="col-span-2 group relative h-48 rounded-xl overflow-hidden glass-panel border-white/10 hover:border-[#D4AF37]/40 transition-all">
+<img alt="Red Lantern Road" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="Wide cinematic shot of an ancient cobble stone street lined with glowing red traditional lanterns at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzNLAsJUoMHqPElAWMQn7ASthR2y2iF_JblANmz1wfmIRpSQzQjL0skx0Rd_JHoYeMk3jimgSO6hFSrs4BFFHNslj1mJASl_gj9FVDgpmCuBfPwP5OBKZT1MRCMkb2BT-MqOMOpSRzdZazYwANgXQtPJDu7CU9rb5BZDMvEttcTOD5dr7o1dGbk3LJJLZoYTNZergTR-xUtrKM_fj19owyaadIA6PVHuW9cqQsYLHC34ya73W7Kt4ov-mPp2jCEMmvdMxg1wyDbMNk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-dim to-transparent p-8 flex flex-col justify-center">
+<span class="text-[10px] text-[#D4AF37] uppercase font-label-sm mb-1">Documentary / Art</span>
+<h4 class="font-headline-md text-3xl text-white">Red Lantern Road</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommended & All Movies Grid -->
+<section class="container mx-auto px-12 mt-32 mb-24">
+<h2 class="font-headline-lg text-headline-lg text-white mb-12">Collection Catalogue</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-16">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-4 border border-white/5 group-hover:border-[#D4AF37]/50 transition-all duration-300">
+<img alt="Clockwork Orchard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Detailed steampunk clockwork mechanisms integrated into the trunk of a golden apple tree, macro photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUzIYd583nACuzBuy6UckS5WkauioZ49MpWqZ2x4ZSpaEv9kkqdTdXg1tfXLDaMhA9Set_zUE1N7zdnEQKYPwPj8SiCefo1xhMtyP-7xbYsNVCsQ4csZx-WKHhEf1QAZc56maz5PMITV5GN-YYOzg-N-ELYTYPHkCrmHoa36aqWXv58N4N9g6fnQpmheaVmbq7CX4F4GRsaXadlj2IW_mmkTY6EAKTlQe0WGbnQ63OajI3967g-93yQ-q7rLbvfF4YHghvIN8gjTlJ"/>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-[10px] text-[#D4AF37] border border-[#D4AF37]/30">8.4</div>
+</div>
+<h3 class="font-headline-md text-xl text-white mb-1 group-hover:text-[#D4AF37] transition-colors">Clockwork Orchard</h3>
+<div class="flex items-center justify-between">
+<span class="text-white/40 text-[10px] uppercase font-label-sm tracking-widest">Steampunk / Thriller</span>
+<span class="text-white/60 text-[10px] font-label-sm">PG-13</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-4 border border-white/5 group-hover:border-[#D4AF37]/50 transition-all duration-300">
+<img alt="Letters from the Moon" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist composition of an astronaut sitting on a lunar crater writing in a journal with earth in the distant sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVlDPj27-YljwWLBtx3Mer8fKFXgMkvydNHMkG3lDMnm8xInK5iFjxHHbYYZ2VLk0etJC9s1kdegMBnTtFW8nP6tJzDYftocqDC2OUeYZvJA08jhW1TZfzTMKtphKFEMJAWsVbqG7-R5T3-si-OEAmxSruh0NerY0_n8skapXEbB44ZaFcOepoyzE6An8pFcf3mXeznfa2iaftklBBVYWeNzlBCpG4JqZ2nHMzQDsTu4JrnE6IPBATMCXqQeTOK6juJ_XmrJrV4Aou"/>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-[10px] text-[#D4AF37] border border-[#D4AF37]/30">9.1</div>
+</div>
+<h3 class="font-headline-md text-xl text-white mb-1 group-hover:text-[#D4AF37] transition-colors">Letters from the Moon</h3>
+<div class="flex items-center justify-between">
+<span class="text-white/40 text-[10px] uppercase font-label-sm tracking-widest">Sci-Fi / Romance</span>
+<span class="text-white/60 text-[10px] font-label-sm">G</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-4 border border-white/5 group-hover:border-[#D4AF37]/50 transition-all duration-300">
+<img alt="The Hollow Carnival" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Spooky abandoned circus tent with tattered stripes and a single eerie spotlight in the center of the ring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg-cHaHsmuhgn-WgSHi_XqwvvIDRN8Zy7sY9VJJ9Zh7iWrXqsfCqiwtlbm6z8-bfXmu1-Y9V7t7_CwdTLE__16q0zrYtdj7xsmWiCTjpXuofUGm_EZZFckbKcePa-xFAtE70c3X85iSfS9GTblTNJxl34LsF1MebCAC3zjpAeQlpR7RoCcBkkzVglif-iNNVJrgl924ya1hJrQTrQnCoK66SM1QgY8fbjN_Xt2S-yKmBCM3FAitCHZ2pFgqYwHbCeC9IjHTOif602R"/>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-[10px] text-[#D4AF37] border border-[#D4AF37]/30">7.8</div>
+</div>
+<h3 class="font-headline-md text-xl text-white mb-1 group-hover:text-[#D4AF37] transition-colors">The Hollow Carnival</h3>
+<div class="flex items-center justify-between">
+<span class="text-white/40 text-[10px] uppercase font-label-sm tracking-widest">Horror / Thriller</span>
+<span class="text-white/60 text-[10px] font-label-sm">R</span>
+</div>
+</div>
+<!-- Featured Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-4 border border-[#D4AF37]/50 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.15)]">
+<img alt="Aurora Protocol" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Abstract cinematic light leaks and lens flares in gold and deep teal tones, suggesting high-tech energy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdlkObGFRmzqme9ce34bsS2A1ExehqNG5IqQGUxqwEUUclS11-6K8v7KhlbdQemk6x2YSGpwQ7Y7FtuaT3EmdyBqBHNK8AKZXfsqp6vehSk8FVqgSCdkczbYukiCQiAKI01-JpGiYPzfri7pBCKSh6KlVRnyU53qx06nN__OToMlkA7ygWspWdzNSL2hCEXg9gfyX4Ta93WxDymqk8xEeJuujyFENayD5H1RkgtTyQdIhgE1WW6XrdXbmUb6kdygTR6ePrFb4AaYn8"/>
+<div class="absolute inset-0 bg-[#D4AF37]/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute top-4 left-4 bg-[#D4AF37] text-surface-dim px-2 py-0.5 rounded text-[10px] font-bold uppercase">Featured</div>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-[10px] text-[#D4AF37] border border-[#D4AF37]/30">9.5</div>
+</div>
+<h3 class="font-headline-md text-xl text-white mb-1 group-hover:text-[#D4AF37] transition-colors">Aurora Protocol</h3>
+<div class="flex items-center justify-between">
+<span class="text-white/40 text-[10px] uppercase font-label-sm tracking-widest">Sci-Fi / Action</span>
+<span class="text-white/60 text-[10px] font-label-sm">PG-13</span>
+</div>
+</div>
+</div>
+<!-- Pagination/Show More -->
+<div class="mt-20 flex justify-center">
+<button class="group flex flex-col items-center gap-4">
+<span class="text-[10px] text-white/40 uppercase tracking-[0.4em] font-label-md">Explore More</span>
+<div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#D4AF37] group-hover:translate-y-2 transition-all">
+<span class="material-symbols-outlined text-[#D4AF37]">expand_more</span>
+</div>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-white/10 bg-[#121212]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full font-['Noto_Serif'] text-xs uppercase tracking-widest">
+<div class="flex flex-col gap-2 mb-8 md:mb-0">
+<span class="text-xl font-bold tracking-widest text-[#D4AF37] uppercase">CineLux</span>
+<p class="text-white/40 normal-case tracking-normal max-w-xs font-body-md text-[11px]">Experience the pinnacle of cinematic luxury in our hand-crafted boutique theaters.</p>
+</div>
+<div class="flex gap-12 mb-8 md:mb-0">
+<div class="flex flex-col gap-4">
+<span class="text-white/60 font-bold mb-2">Company</span>
+<a class="text-white/40 hover:text-[#D4AF37] hover:underline decoration-[#D4AF37] underline-offset-4 transition-all" href="#">Careers</a>
+<a class="text-white/40 hover:text-[#D4AF37] hover:underline decoration-[#D4AF37] underline-offset-4 transition-all" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white/60 font-bold mb-2">Legal</span>
+<a class="text-white/40 hover:text-[#D4AF37] hover:underline decoration-[#D4AF37] underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="text-white/40 hover:text-[#D4AF37] hover:underline decoration-[#D4AF37] underline-offset-4 transition-all" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-end gap-6">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-white/40 hover:text-[#D4AF37] cursor-pointer">share</span>
+<span class="material-symbols-outlined text-white/40 hover:text-[#D4AF37] cursor-pointer">camera</span>
+<span class="material-symbols-outlined text-white/40 hover:text-[#D4AF37] cursor-pointer">movie</span>
+</div>
+<div class="text-white/40 text-[10px]">© 2024 CineLux Premium Cinemas. All rights reserved.</div>
+</div>
+</div>
+</footer>
+</body></html>

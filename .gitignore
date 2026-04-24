@@ -1,0 +1,33 @@
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3-journal
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+backend/env/
+
+# Backend runtime artifacts
+backend/*.sqlite3
+backend/*.log
+backend/*.err.log
+
+# Node / frontend artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/*.log
+frontend/*.err.log
+*.tsbuildinfo
+
+# Editor / OS
+.idea/
+.vscode/
